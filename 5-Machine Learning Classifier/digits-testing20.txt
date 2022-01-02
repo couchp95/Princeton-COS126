@@ -1,0 +1,22 @@
+10
+28 28
+digits/testing/0/69.png      0
+digits/testing/1/39.png      1
+digits/testing/5/45.png      5
+digits/testing/6/91.png      6
+digits/testing/1/74.png      1
+digits/testing/1/2.png       1
+digits/testing/5/15.png      5
+digits/testing/7/64.png      7
+digits/testing/9/9.png       9
+digits/testing/3/63.png      3
+digits/testing/2/35.png      2
+digits/testing/5/53.png      5
+digits/testing/2/82.png      2
+digits/testing/5/59.png      5
+digits/testing/9/99.png      9
+digits/testing/1/14.png      1
+digits/testing/2/38.png      2
+digits/testing/8/84.png      8
+digits/testing/6/81.png      6
+digits/testing/2/43.png      2

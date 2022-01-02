@@ -1,0 +1,5 @@
+10
+28 28
+digits/testing/0/7846.png    0
+digits/testing/5/5571.png    5
+digits/testing/3/7398.png    3

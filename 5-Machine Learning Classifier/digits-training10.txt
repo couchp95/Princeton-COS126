@@ -1,0 +1,12 @@
+10
+28 28
+digits/training/0/1.png      0
+digits/training/0/88.png     0
+digits/training/3/74.png     3
+digits/training/6/66.png     6
+digits/training/1/70.png     1
+digits/training/4/9.png      4
+digits/training/4/61.png     4
+digits/training/6/39.png     6
+digits/training/9/57.png     9
+digits/training/2/16.png     2
