@@ -1,0 +1,35 @@
+
+-----------------------------------------------------------------------------
+loc value  pseudocode (for the humans)   Java equivalent (optional)
+-----------------------------------------------------------------------------
+10: 81FF   read R[1]                     a = StdIn.readInt();
+11: 7A26   R[A] <- 0026                     R[A] <- FFFF
+12: 2B1A   R[B] <- R[1] - R[A]            
+13: CB25   if (R[B] == 0) goto 25           if (R[B] == 0) goto halt   
+14: 82FF   read R[2]                     b = StdIn.readInt();
+15: 83FF   read R[3]                     c = StdIn.readInt();
+16: 84FF   read R[4]                     d = StdIn.readInt();
+17: 4C12   R[C] <- R[1] ^ R[2]             p1 = m1 ^ m2 ^ m4;
+18: 45C4   R[5] <- R[C] ^ R[4]           
+19: 4C13   R[C] <- R[1] ^ R[3]             p1 = m1 ^ m3 ^ m4;
+1A: 46C4   R[6] <- R[C] ^ R[4]           
+1B: 4C23   R[C] <- R[2] ^ R[3]             p1 = m2 ^ m3 ^ m4;
+1C: 47C4   R[7] <- R[C] ^ R[4]           
+1D: 91FF   write R[1]                     StdOut.println(a);
+1E: 92FF   write R[2]                     StdOut.println(b);
+1F: 93FF   write R[3]                     StdOut.println(c);
+20: 94FF   write R[4]                     StdOut.println(d);
+21: 95FF   write R[5]                     StdOut.println(p1);
+22: 96FF   write R[6]                     StdOut.println(p2);
+23: 97FF   write R[7]                     StdOut.println(p3);
+24: C010   goto 10                       
+25: 0000   halt                          
+26: FFFF   R[F] <- PC; goto FF                                     
+-----------------------------------------------------------------------------
+
+Note: TOY.java ignores any line that is not of the form 
+
+    XX: YYYY  ... 
+
+where XX are two hex digits, YYYY are four hex digits, and ... are comments.
+The number of spaces is not important.
