@@ -2,7 +2,11 @@ public class TextGenerator {
     public static void main(String[] args) {
         int k = Integer.parseInt(args[0]);
         int t = Integer.parseInt(args[1]);
-        String s = StdIn.readString();
+        String[] sAll = StdIn.readAllLines();
+        String s = "";
+        for (String tmp : sAll)
+            s += tmp;
+        // System.out.println(s);
         MarkovModel mm = new MarkovModel(s, k);
         String kgram = s.substring(0, k);
         System.out.print(kgram);
