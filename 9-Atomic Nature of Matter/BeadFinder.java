@@ -1,13 +1,13 @@
 public class BeadFinder {
     private Queue<Blob> blobs;
-    private int[][] pic;
+    private boolean[][] pic;
     private Picture picture;
 
     //  finds all blobs in the specified picture using luminance threshold tau
     public BeadFinder(Picture picture, double tau) {
         this.picture = picture;
         blobs = new Queue<Blob>();
-        pic = new int[picture.width()][picture.height()];
+        pic = new boolean[picture.width()][picture.height()];
         for (int x = 0; x < picture.width(); x++)
             for (int y = 0; y < picture.height(); y++) {
                 Blob b = new Blob();
@@ -21,9 +21,9 @@ public class BeadFinder {
 
     private Blob dfs(int x, int y, double tau, Blob b) {
         // System.out.println("Blob size: " + b.mass());
-        if (pic[x][y] == 0 && Luminance.intensity(picture.get(x, y)) > tau) {
+        if (!pic[x][y] && Luminance.intensity(picture.get(x, y)) > tau) {
             b.add(x, y);
-            pic[x][y] = -1;
+            pic[x][y] = true;
             if (x > 0) dfs(x - 1, y, tau, b);
             if (x < picture.width() - 1) dfs(x + 1, y, tau, b);
             if (y > 0) dfs(x, y - 1, tau, b);
